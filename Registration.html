@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Sun Son Solar - Registration</title>
+<style>
+       body {
+           font-family: Arial, sans-serif;
+           background-color: #F7F3E8;
+           margin: 0;
+           padding: 40px;
+       }
+       .container {
+           width: 800px;
+           margin: auto;
+           background-color: #FFFDF7;
+           border: 1px solid #D6CDB8;
+           border-radius: 12px;
+           display: flex;
+           overflow: hidden;
+           box-shadow: 0 5px 15px rgba(60, 70, 40, 0.12);
+       }
+       /* LEFT SIDE */
+       .left {
+           width: 35%;
+           padding: 30px;
+           background-color: white;
+           border-right: 1px solid #dce1d3;
+           text-align: center;
+       }
+       .logo {
+           text-align: center;
+           margin-bottom: 15px;
+       }
+       .logo img {
+           width: 180px;
+           height: auto;
+           display: block;
+           margin: auto;
+       }
+       .left h1 {
+           font-family: Georgia, serif;
+           color: #31452B;
+           letter-spacing: 3px;
+           margin-bottom: 5px;
+       }
+       .left hr {
+           width: 100px;
+           border: none;
+       }
+       .left h3 {
+           color: #657A52;
+           letter-spacing: 4px;
+           font-weight: normal;
+           margin-top: 8px;
+       }
+       .left > p {
+           color: #52604A;
+           font-size: 13px;
+       }
+       /* FEATURES */
+       .features {
+           text-align: left;
+           margin-top: 50px;
+       }
+       .features p {
+           color: #3E4D36;
+           font-size: 14px;
+           margin: 25px 0;
+       }
+       /* RIGHT SIDE */
+       .right {
+           width: 65%;
+           padding: 35px;
+           background-color: #e1eede;
+       }
+       .right h2 {
+           text-align: center;
+           font-family: Georgia, serif;
+           color: #31452B;
+           letter-spacing: 2px;
+           margin-bottom: 5px;
+       }
+       .subtitle {
+           text-align: center;
+           font-size: 13px;
+           color: #77715F;
+           margin-bottom: 22px;
+       }
+       /* INPUTS */
+       .input {
+           width: 100%;
+           height: 40px;
+           margin-bottom: 4px;
+           padding: 10px;
+           box-sizing: border-box;
+           background-color: #FAF8F0;
+           border: 1px solid #CFC7B4;
+           border-radius: 7px;
+           outline: none;
+       }
+       .input:focus {
+           border: 1px solid #D6A72C;
+           background-color: white;
+       }
+       /* ERROR MESSAGE */
+       .error {
+           display: block;
+           color: #B23A2B;
+           font-size: 11px;
+           margin-bottom: 7px;
+           min-height: 13px;
+       }
+       /* TERMS */
+       .terms {
+           color: #545862;
+           font-size: 12px;
+           margin: 12px 0;
+       }
+       .terms input {
+           accent-color: #D6A72C;
+       }
+       .terms a {
+           color: #366bde;
+           font-weight: bold;
+       }
+       /* REGISTER BUTTON */
+       .register {
+           width: 100%;
+           height: 42px;
+           border: none;
+           border-radius: 20px;
+           background-color: #D6A72C;
+           color: #2F3528;
+           cursor: pointer;
+           font-size: 14px;
+           font-weight: bold;
+           letter-spacing: 1px;
+       }
+       .register:hover {
+           background-color: #B98D1F;
+           color: white;
+       }
+       /* LOGIN */
+       .login {
+           text-align: center;
+           font-size: 12px;
+           margin-top: 15px;
+           color: #77715F;
+       }
+       .login a {
+           color: #366bde;
+           font-weight: bold;
+       }
+
+</style>
+</head>
+<body>
+<div class="container">
+<!-- LEFT SIDE -->
+<div class="left">
+<div class="logo">
+<img
+  src="c:\Users\DIANNA\Downloads\logofinal.png"
+ alt="Sun Son Solar Logo"
+>
+
+</div>
+<h1>SUN SON</h1>
+<hr>
+<h3>----SOLAR----</h3>
+
+<p>
+  Powering a Brighter Future
+</p>
+
+<div class="features">
+<p>🍃 &nbsp; Clean Energy</p>
+<p>🌎 &nbsp; Sustainable Future</p>
+<p>🛡️ &nbsp; Reliable Solutions</p>
+</div>
+</div>
+<!-- RIGHT SIDE -->
+<div class="right">
+
+<h2>
+  CREATE AN ACCOUNT
+</h2>
+
+<p class="subtitle">
+ Fill in the details to get started
+</p>
+
+<form id="registrationForm">
+
+<!-- FIRST NAME -->
+<input
+    type="text"
+    class="input"
+    placeholder="First Name"
+    required
+>
+
+<!-- MIDDLE NAME -->
+<input
+    type="text"
+    class="input"
+    placeholder="Middle Name"
+    required
+>
+
+<!-- LAST NAME -->
+<input
+    type="text"
+    class="input"
+    placeholder="Last Name"
+    required
+>
+
+<!-- BIRTHDATE -->
+<input
+    type="date"
+    class="input"
+    required
+>
+<!-- GENDER -->
+<select
+    class="input"
+    id="gender"
+    required
+>
+<option
+    value=""
+    disabled
+    selected
+>
+    Select Gender
+</option>
+
+<option value="Male">
+  Male
+</option>
+
+<option value="Female">
+  Female
+</option>
+
+<option value="Prefer not to say">
+  Prefer not to say
+</option>
+</select>
+
+<!-- EMAIL -->
+<input
+    type="email"
+    class="input"
+    placeholder="Email Address"
+    required
+>
+
+<!-- CONTACT NUMBER -->
+<input
+    type="text"
+    id="contact"
+    class="input"
+    placeholder="Contact Number"
+    maxlength="11"
+    required
+>
+<span
+    id="contactError"
+    class="error"
+></span>
+
+<!-- HOME ADDRESS -->
+<input
+    type="text"
+    class="input"
+    placeholder="Home Address"
+    required
+>
+<!-- USERNAME -->
+<input
+    type="text"
+    class="input"
+    placeholder="Username"
+    required
+>
+
+<!-- PASSWORD -->
+<input
+    type="password"
+    id="password"
+    class="input"
+    placeholder="Password"
+    required
+>
+
+<!-- CONFIRM PASSWORD -->
+<input
+   type="password"
+   id="confirmPassword"
+   class="input"
+   placeholder="Confirm Password"
+   required
+>
+<span
+    id="passwordError"
+    class="error"
+></span>
+
+<!-- ACCOUNT TYPE -->
+<select
+    class="input"
+    id="accountType"
+    required
+>
+<option
+    value=""
+    disabled
+    selected
+>
+   Select Account Type
+</option>
+<option value="Customer">
+    Customer
+</option>
+<option value="Employee">   
+    Employee
+</option>
+<option value="Admin">
+    Admin
+</option>
+
+</select>
+<!-- DEPARTMENT -->
+<select
+    class="input"
+    id="department"
+    style="display: none;"
+>
+<option
+    value=""
+    disabled
+    selected
+>
+    Select Department
+</option>
+<option value="IT">
+    IT
+</option>
+<option value="Technician">
+    Technician
+</option>
+<option value="Dispatcher">
+    Dispatcher
+</option>
+<option value="Administration">
+    Administration
+</option>
+<option value="Other">
+    Other
+</option>
+</select>
+<!-- TERMS -->
+<div class="terms">
+<input
+    type="checkbox"
+    id="terms"
+    required
+>
+        I agree to the
+<a href="#">
+        Terms & Conditions
+</a>
+</div>
+<!-- REGISTER -->
+<button
+    type="submit"
+    class="register"
+>
+        REGISTER
+</button>
+</form>
+<p class="login">
+        Already have an account?
+<a href="#">
+        Login here
+</a>
+</p>
+</div>
+</div>
+<script>
+       // Get form and inputs
+       const form =
+           document.getElementById("registrationForm");
+       const contact =
+           document.getElementById("contact");
+       const password =
+           document.getElementById("password");
+       const confirmPassword =
+           document.getElementById("confirmPassword");
+       const contactError =
+           document.getElementById("contactError");
+       const passwordError =
+           document.getElementById("passwordError");
+       const accountType =
+           document.getElementById("accountType");
+       const department =
+           document.getElementById("department");
+
+       // Show department when Employee is selected
+       accountType.addEventListener(
+           "change",
+           function() {
+               if (accountType.value === "Employee") {
+                   department.style.display = "block";
+                   department.required = true;
+               } else {
+                   department.style.display = "none";
+                   department.required = false;
+                   department.value = "";
+               }
+           }
+       );
+
+       // Check if Register is clicked
+       form.addEventListener(
+           "submit",
+           function(event) {
+               event.preventDefault();
+
+               // Clear old messages
+               contactError.textContent = "";
+               passwordError.textContent = "";
+               // Check contact number
+
+               if (!/^[0-9]+$/.test(contact.value)) {
+                   contactError.textContent =
+                       "Please enter numbers only.";
+                   return;
+               }
+               
+               // Check contact number length
+               if (contact.value.length < 11) {
+                   contactError.textContent =
+                       "Kulang! Contact number must be 11 digits.";
+                   return;
+               }
+               if (contact.value.length > 11) {
+                   contactError.textContent =
+                       "Contact number must only contain 11 digits.";
+                   return;
+               }
+               // Check password
+               if (
+                   password.value !==
+               S confirmPassword.value
+               ) {
+                   passwordError.textContent =
+                       "Password doesn't match.";
+                  return;
+               }
+               // Check employee department
+               if (
+                  accountType.value === "Employee" &&
+                   department.value === ""
+               ) {
+                   alert(
+                       "Please select your department."
+                   );
+                   return; 
+               }
+               // Registration successful
+               alert( "Please select your department."
+                   );
+                   return;
+               }
+               // Registration successful
+               alert(
+                   "Registration successful!"
+               );
+               // Reset form
+               form.reset();
+               // Hide department after reset
+          department.style.display = "none";
+               department.required = false;
+       );
+
+</script>
+</body>
+</html>
