@@ -1,0 +1,1304 @@
+```
+<!DOCTYPE html>
+<html>
+<head>
+<title>Sun Son Solar - Products & Services</title>
+
+<style>
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #F7F3E8;
+    margin: 0;
+    color: #31452B;
+}
+
+
+
+header {
+    background-color: #FFFDF7;
+    border-bottom: 1px solid #D6CDB8;
+    padding: 15px 5%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.header-logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.header-logo img {
+    width: 55px;
+    height: 55px;
+    object-fit: contain;
+}
+
+.header-logo h2 {
+    font-family: Georgia, serif;
+    letter-spacing: 2px;
+    margin: 0;
+}
+
+nav {
+    display: flex;
+    gap: 25px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #52604A;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: #D6A72C;
+}
+
+.header-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.cart-button,
+.login-button {
+    border: 1px solid #D6CDB8;
+    background-color: #FFFDF7;
+    padding: 10px 15px;
+    border-radius: 20px;
+    cursor: pointer;
+    color: #31452B;
+    font-weight: bold;
+}
+
+.cart-button:hover,
+.login-button:hover {
+    background-color: #D6A72C;
+    color: white;
+}
+
+
+
+.hero {
+    text-align: center;
+    padding: 70px 20px;
+
+    background-color: #E1EEDE;
+}
+
+.hero h1 {
+    font-family: Georgia, serif;
+    font-size: 42px;
+    letter-spacing: 3px;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    color: #657A52;
+    font-size: 16px;
+}
+
+.hero-buttons {
+    margin-top: 25px;
+}
+
+.hero-button {
+    display: inline-block;
+    padding: 13px 25px;
+    margin: 5px;
+
+    border-radius: 25px;
+    text-decoration: none;
+
+    background-color: #D6A72C;
+    color: #2F3528;
+
+    font-weight: bold;
+}
+
+.hero-button:hover {
+    background-color: #B98D1F;
+    color: white;
+}
+
+
+
+section {
+    padding: 60px 5%;
+}
+
+.section-title {
+    text-align: center;
+    font-family: Georgia, serif;
+    letter-spacing: 2px;
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+.section-subtitle {
+    text-align: center;
+    color: #77715F;
+    margin-bottom: 35px;
+}
+
+
+
+.categories {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 35px;
+}
+
+.category-button {
+    border: 1px solid #D6CDB8;
+    background-color: #FFFDF7;
+
+    padding: 10px 18px;
+    border-radius: 20px;
+
+    cursor: pointer;
+    color: #52604A;
+    font-weight: bold;
+}
+
+.category-button:hover,
+.category-button.active {
+    background-color: #D6A72C;
+    color: white;
+}
+
+
+
+.product-grid {
+    max-width: 1200px;
+    margin: auto;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+
+
+.product-card {
+    background-color: #FFFDF7;
+
+    border: 1px solid #D6CDB8;
+    border-radius: 12px;
+
+    overflow: hidden;
+
+    box-shadow: 0 5px 15px rgba(60, 70, 40, 0.10);
+
+    transition: 0.3s;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(60, 70, 40, 0.18);
+}
+
+.product-image {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    background-color: #E1EEDE;
+}
+
+.product-info {
+    padding: 20px;
+}
+
+.product-category {
+    color: #657A52;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.product-info h3 {
+    margin: 8px 0;
+    font-family: Georgia, serif;
+    color: #31452B;
+}
+
+.product-description {
+    color: #77715F;
+    font-size: 13px;
+    line-height: 1.5;
+    min-height: 60px;
+}
+
+.price {
+    color: #31452B;
+    font-size: 21px;
+    font-weight: bold;
+    margin: 15px 0;
+}
+
+.product-button {
+    width: 100%;
+    border: none;
+
+    background-color: #D6A72C;
+    color: #2F3528;
+
+    padding: 12px;
+    border-radius: 20px;
+
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.product-button:hover {
+    background-color: #B98D1F;
+    color: white;
+}
+
+
+
+.services-section {
+    background-color: #E1EEDE;
+}
+
+.services-grid {
+    max-width: 1100px;
+    margin: auto;
+
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 20px;
+}
+
+.service-card {
+    background-color: #FFFDF7;
+
+    border: 1px solid #D6CDB8;
+    border-radius: 12px;
+
+    padding: 25px;
+
+    text-align: center;
+
+    transition: 0.3s;
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+}
+
+.service-icon {
+    font-size: 35px;
+    margin-bottom: 10px;
+}
+
+.service-card h3 {
+    font-family: Georgia, serif;
+    color: #31452B;
+}
+
+.service-card p {
+    color: #77715F;
+    font-size: 13px;
+    line-height: 1.5;
+}
+
+.service-button {
+    border: none;
+    background-color: #D6A72C;
+    padding: 9px 15px;
+
+    border-radius: 20px;
+
+    cursor: pointer;
+    font-weight: bold;
+}
+
+
+
+.consultation {
+    max-width: 800px;
+    margin: auto;
+
+    text-align: center;
+}
+
+.consultation-box {
+    background-color: #FFFDF7;
+
+    border: 1px solid #D6CDB8;
+    border-radius: 12px;
+
+    padding: 35px;
+
+    box-shadow: 0 5px 15px rgba(60, 70, 40, 0.10);
+}
+
+.consultation-button {
+    border: none;
+    background-color: #D6A72C;
+
+    padding: 13px 30px;
+
+    border-radius: 25px;
+
+    cursor: pointer;
+
+    font-weight: bold;
+}
+
+.consultation-button:hover {
+    background-color: #B98D1F;
+    color: white;
+}
+
+
+
+.cart-panel {
+    display: none;
+
+    position: fixed;
+
+    right: 20px;
+    top: 80px;
+
+    width: 350px;
+    max-height: 500px;
+
+    overflow-y: auto;
+
+    background-color: #FFFDF7;
+
+    border: 1px solid #D6CDB8;
+    border-radius: 12px;
+
+    box-shadow: 0 10px 30px rgba(0,0,0,0.20);
+
+    padding: 20px;
+
+    z-index: 2000;
+}
+
+.cart-panel h2 {
+    font-family: Georgia, serif;
+}
+
+.cart-item {
+    border-bottom: 1px solid #D6CDB8;
+
+    padding: 12px 0;
+}
+
+.cart-item strong {
+    display: block;
+}
+
+.cart-total {
+    font-size: 20px;
+    font-weight: bold;
+
+    margin-top: 20px;
+}
+
+.checkout-button {
+    width: 100%;
+
+    border: none;
+
+    background-color: #D6A72C;
+
+    padding: 12px;
+
+    border-radius: 20px;
+
+    margin-top: 15px;
+
+    cursor: pointer;
+
+    font-weight: bold;
+}
+
+
+
+footer {
+    background-color: #31452B;
+
+    color: white;
+
+    text-align: center;
+
+    padding: 30px;
+}
+
+
+
+@media (max-width: 900px) {
+
+    .product-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    nav {
+        display: none;
+    }
+}
+
+@media (max-width: 600px) {
+
+    header {
+        padding: 10px 20px;
+    }
+
+    .product-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .services-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .hero h1 {
+        font-size: 32px;
+    }
+
+    .cart-panel {
+        width: calc(100% - 40px);
+    }
+}
+</style>
+</head>
+
+<body>
+
+
+
+<header>
+
+    <div class="header-logo">
+
+        <!-- Change this to your actual logo path -->
+        <img src="logofinal.png" alt="Sun Son Solar Logo">
+
+        <h2>SUN SON</h2>
+
+    </div>
+
+    <nav>
+
+        <a href="#home">Home</a>
+
+        <a href="#products">Products</a>
+
+        <a href="#services">Services</a>
+
+        <a href="#consultation">Consultation</a>
+
+        <a href="#contact">Contact</a>
+
+    </nav>
+
+    <div class="header-buttons">
+
+        <button
+            class="cart-button"
+            onclick="toggleCart()"
+        >
+            🛒 Cart
+            (<span id="cartCount">0</span>)
+        </button>
+
+        <button
+            class="login-button"
+            onclick="alert('Login page coming soon!')"
+        >
+            👤 Login
+        </button>
+
+    </div>
+
+</header>
+
+
+
+<div
+    class="cart-panel"
+    id="cartPanel"
+>
+
+    <h2>Your Cart</h2>
+
+    <div id="cartItems">
+
+        <p>Your cart is empty.</p>
+
+    </div>
+
+    <div class="cart-total">
+
+        Total:
+        ₱<span id="cartTotal">0</span>
+
+    </div>
+
+    <button
+        class="checkout-button"
+        onclick="checkout()"
+    >
+        CHECKOUT
+    </button>
+
+</div>
+
+
+
+<section
+    class="hero"
+    id="home"
+>
+
+    <h1>
+        POWERING A BRIGHTER FUTURE
+    </h1>
+
+    <p>
+        Reliable solar solutions for homes and businesses.
+    </p>
+
+    <div class="hero-buttons">
+
+        <a
+            href="#products"
+            class="hero-button"
+        >
+            Explore Products
+        </a>
+
+        <a
+            href="#consultation"
+            class="hero-button"
+        >
+            Get Consultation
+        </a>
+
+    </div>
+
+</section>
+
+
+
+<section id="products">
+
+    <h2 class="section-title">
+        OUR PRODUCTS
+    </h2>
+
+    <p class="section-subtitle">
+        Quality solar products for your energy needs.
+    </p>
+
+    
+
+    <div class="categories">
+
+        <button
+            class="category-button active"
+            onclick="filterProducts('all', this)"
+        >
+            All
+        </button>
+
+        <button
+            class="category-button"
+            onclick="filterProducts('panel', this)"
+        >
+            Panels
+        </button>
+
+        <button
+            class="category-button"
+            onclick="filterProducts('inverter', this)"
+        >
+            Inverters
+        </button>
+
+        <button
+            class="category-button"
+            onclick="filterProducts('battery', this)"
+        >
+            Batteries
+        </button>
+
+        <button
+            class="category-button"
+            onclick="filterProducts('racking', this)"
+        >
+            Racking
+        </button>
+
+        <button
+            class="category-button"
+            onclick="filterProducts('mounting', this)"
+        >
+            Mounting
+        </button>
+
+        <button
+            class="category-button"
+            onclick="filterProducts('wires', this)"
+        >
+            Wires
+        </button>
+
+    </div>
+
+    
+
+    <div
+        class="product-grid"
+        id="productGrid"
+    >
+
+    </div>
+
+</section>
+
+
+<section
+    class="services-section"
+    id="services"
+>
+
+    <h2 class="section-title">
+        OUR SERVICES
+    </h2>
+
+    <p class="section-subtitle">
+        Complete solar solutions from planning to maintenance.
+    </p>
+
+    <div class="services-grid">
+
+        
+
+        <div class="service-card">
+
+            <div class="service-icon">
+                💬
+            </div>
+
+            <h3>
+                Consultation
+            </h3>
+
+            <p>
+                Get professional advice about
+                your solar energy needs.
+            </p>
+
+            <button
+                class="service-button"
+                onclick="requestService('Consultation')"
+            >
+                Request
+            </button>
+
+        </div>
+
+        <!-- DESIGN -->
+
+        <div class="service-card">
+
+            <div class="service-icon">
+                📐
+            </div>
+
+            <h3>
+                Designing
+            </h3>
+
+            <p>
+                Customized solar system designs
+                based on your requirements.
+            </p>
+
+            <button
+                class="service-button"
+                onclick="requestService('Designing')"
+            >
+                Request
+            </button>
+
+        </div>
+
+        
+
+        <div class="service-card">
+
+            <div class="service-icon">
+                📄
+            </div>
+
+            <h3>
+                Permitting
+            </h3>
+
+            <p>
+                Assistance with the necessary
+                solar installation permits.
+            </p>
+
+            <button
+                class="service-button"
+                onclick="requestService('Permitting')"
+            >
+                Request
+            </button>
+
+        </div>
+
+        
+
+        <div class="service-card">
+
+            <div class="service-icon">
+                🔧
+            </div>
+
+            <h3>
+                Installation
+            </h3>
+
+            <p>
+                Professional installation of
+                your solar energy system.
+            </p>
+
+            <button
+                class="service-button"
+                onclick="requestService('Installation')"
+            >
+                Request
+            </button>
+
+        </div>
+
+        
+
+        <div class="service-card">
+
+            <div class="service-icon">
+                🛠️
+            </div>
+
+            <h3>
+                Maintenance
+            </h3>
+
+            <p>
+                Keep your solar system operating
+                efficiently and reliably.
+            </p>
+
+            <button
+                class="service-button"
+                onclick="requestService('Maintenance')"
+            >
+                Request
+            </button>
+
+        </div>
+
+        
+
+        <div class="service-card">
+
+            <div class="service-icon">
+                🔨
+            </div>
+
+            <h3>
+                Repair
+            </h3>
+
+            <p>
+                Professional troubleshooting
+                and repair services.
+            </p>
+
+            <button
+                class="service-button"
+                onclick="requestService('Repair')"
+            >
+                Request
+            </button>
+
+        </div>
+
+        
+
+        <div class="service-card">
+
+            <div class="service-icon">
+                📊
+            </div>
+
+            <h3>
+                Monitoring
+            </h3>
+
+            <p>
+                Monitor the performance of
+                your solar energy system.
+            </p>
+
+            <button
+                class="service-button"
+                onclick="requestService('Monitoring')"
+            >
+                View
+            </button>
+
+        </div>
+
+        
+
+        <div class="service-card">
+
+            <div class="service-icon">
+                ☀️
+            </div>
+
+            <h3>
+                Solar Support
+            </h3>
+
+            <p>
+                Get assistance with your solar
+                system and services.
+            </p>
+
+            <button
+                class="service-button"
+                onclick="requestService('Solar Support')"
+            >
+                Contact
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<section id="consultation">
+
+    <div class="consultation">
+
+        <h2 class="section-title">
+            NEED HELP WITH SOLAR?
+        </h2>
+
+        <p class="section-subtitle">
+            Let our team help you find the right
+            solar solution for your needs.
+        </p>
+
+        <div class="consultation-box">
+
+            <p>
+                Not sure which solar products or
+                services you need?
+            </p>
+
+            <button
+                class="consultation-button"
+                onclick="requestService('Consultation')"
+            >
+                REQUEST A CONSULTATION
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<footer id="contact">
+
+    <h3>
+        SUN SON SOLAR
+    </h3>
+
+    <p>
+        Powering a Brighter Future
+    </p>
+
+    <p>
+        © 2026 Sun Son Solar. All rights reserved.
+    </p>
+
+</footer>
+
+<script>
+
+
+
+const products = [
+
+    {
+        name: "550W Monocrystalline Solar Panel",
+        category: "panel",
+        description:
+            "High-efficiency solar panel suitable for residential and commercial solar systems.",
+        price: 12500,
+        image: "images/panel.jpg"
+    },
+
+    {
+        name: "5kW Solar Inverter",
+        category: "inverter",
+        description:
+            "Reliable inverter designed to efficiently convert solar energy for your system.",
+        price: 45000,
+        image: "images/inverter.jpg"
+    },
+
+    {
+        name: "10kWh Solar Battery",
+        category: "battery",
+        description:
+            "Energy storage battery for storing excess solar energy.",
+        price: 85000,
+        image: "images/battery.jpg"
+    },
+
+    {
+        name: "Solar Panel Racking",
+        category: "racking",
+        description:
+            "Durable racking system designed to securely hold solar panels.",
+        price: 15000,
+        image: "images/racking.jpg"
+    },
+
+    {
+        name: "Roof Mounting Kit",
+        category: "mounting",
+        description:
+            "Complete mounting solution for residential rooftop installations.",
+        price: 8500,
+        image: "images/mounting.jpg"
+    },
+
+    {
+        name: "Solar PV Cable",
+        category: "wires",
+        description:
+            "Weather-resistant cable designed for photovoltaic solar systems.",
+        price: 2500,
+        image: "images/wires.jpg"
+    }
+
+];
+
+
+let cart = [];
+
+
+
+function displayProducts(productList) {
+
+    const productGrid =
+        document.getElementById("productGrid");
+
+    productGrid.innerHTML = "";
+
+    productList.forEach((product, index) => {
+
+        const card =
+            document.createElement("div");
+
+        card.className = "product-card";
+
+        card.innerHTML = `
+
+            <img
+                src="${product.image}"
+                alt="${product.name}"
+                class="product-image"
+            >
+
+            <div class="product-info">
+
+                <span class="product-category">
+                    ${product.category}
+                </span>
+
+                <h3>
+                    ${product.name}
+                </h3>
+
+                <p class="product-description">
+                    ${product.description}
+                </p>
+
+                <div class="price">
+                    ₱${product.price.toLocaleString()}
+                </div>
+
+                <button
+                    class="product-button"
+                    onclick="addToCart(${index})"
+                >
+                    🛒 ADD TO CART
+                </button>
+
+            </div>
+        `;
+
+        productGrid.appendChild(card);
+
+    });
+
+}
+
+
+
+function filterProducts(category, button) {
+
+    const buttons =
+        document.querySelectorAll(
+            ".category-button"
+        );
+
+    buttons.forEach(btn => {
+
+        btn.classList.remove("active");
+
+    });
+
+    button.classList.add("active");
+
+    if (category === "all") {
+
+        displayProducts(products);
+
+        return;
+
+    }
+
+    const filtered =
+        products.filter(
+            product =>
+                product.category === category
+        );
+
+    displayProducts(filtered);
+
+}
+
+
+
+function addToCart(index) {
+
+    const product = products[index];
+
+    const existingProduct =
+        cart.find(
+            item => item.name === product.name
+        );
+
+    if (existingProduct) {
+
+        existingProduct.quantity++;
+
+    } else {
+
+        cart.push({
+
+            name: product.name,
+
+            price: product.price,
+
+            quantity: 1
+
+        });
+
+    }
+
+    updateCart();
+
+    alert(
+        product.name +
+        " has been added to your cart."
+    );
+
+}
+
+
+
+function updateCart() {
+
+    const cartItems =
+        document.getElementById("cartItems");
+
+    const cartCount =
+        document.getElementById("cartCount");
+
+    const cartTotal =
+        document.getElementById("cartTotal");
+
+    cartItems.innerHTML = "";
+
+    if (cart.length === 0) {
+
+        cartItems.innerHTML =
+            "<p>Your cart is empty.</p>";
+
+        cartCount.textContent = "0";
+
+        cartTotal.textContent = "0";
+
+        return;
+
+    }
+
+    let total = 0;
+
+    let itemCount = 0;
+
+    cart.forEach((item, index) => {
+
+        total +=
+            item.price * item.quantity;
+
+        itemCount += item.quantity;
+
+        const cartItem =
+            document.createElement("div");
+
+        cartItem.className =
+            "cart-item";
+
+        cartItem.innerHTML = `
+
+            <strong>
+                ${item.name}
+            </strong>
+
+            <p>
+                ₱${item.price.toLocaleString()}
+                × ${item.quantity}
+            </p>
+
+            <button
+                onclick="removeFromCart(${index})"
+            >
+                Remove
+            </button>
+
+        `;
+
+        cartItems.appendChild(cartItem);
+
+    });
+
+    cartCount.textContent = itemCount;
+
+    cartTotal.textContent =
+        total.toLocaleString();
+
+}
+
+
+
+function removeFromCart(index) {
+
+    cart.splice(index, 1);
+
+    updateCart();
+
+}
+
+
+
+function toggleCart() {
+
+    const cartPanel =
+        document.getElementById("cartPanel");
+
+    if (
+        cartPanel.style.display === "block"
+    ) {
+
+        cartPanel.style.display = "none";
+
+    } else {
+
+        cartPanel.style.display = "block";
+
+    }
+
+}
+
+
+
+function checkout() {
+
+    if (cart.length === 0) {
+
+        alert("Your cart is empty.");
+
+        return;
+
+    }
+
+    alert(
+        "Checkout request submitted!"
+    );
+
+}
+
+
+function requestService(service) {
+
+    alert(
+        "You selected: " +
+        service +
+        "\n\nService request form coming soon!"
+    );
+
+}
+
+
+
+displayProducts(products);
+
+updateCart();
+
+</script>
+
+</body>
+</html>
+```
