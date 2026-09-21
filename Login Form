@@ -1,0 +1,931 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Sun Son Solar - Registration</title>
+
+    <style>
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #F7F3E8;
+            margin: 0;
+            padding: 40px;
+        }
+
+        .container {
+            width: 800px;
+            max-width: 100%;
+            margin: auto;
+            background-color: #FFFDF7;
+            border: 1px solid #D6CDB8;
+            border-radius: 12px;
+            display: flex;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(60, 70, 40, 0.12);
+        }
+
+        /* =========================
+           LEFT SIDE
+        ========================= */
+
+        .left {
+            width: 35%;
+            padding: 30px;
+            background-color: #ffffff;
+            border-right: 1px solid #dce1d3;
+            text-align: center;
+        }
+
+        .logo {
+            text-align: center;
+            margin-bottom: 15px;
+        }
+
+        .logo img {
+            width: 180px;
+            height: auto;
+            display: block;
+            margin: auto;
+        }
+
+        .left h1 {
+            font-family: Georgia, serif;
+            color: #31452B;
+            letter-spacing: 3px;
+            margin-bottom: 5px;
+        }
+
+        .left hr {
+            width: 100px;
+            border: none;
+            border-top: 2px solid #D6A72C;
+        }
+
+        .left h3 {
+            color: #657A52;
+            letter-spacing: 4px;
+            font-weight: normal;
+            margin-top: 8px;
+        }
+
+        .left > p {
+            color: #52604A;
+            font-size: 13px;
+        }
+
+        .features {
+            text-align: left;
+            margin-top: 50px;
+        }
+
+        .features p {
+            color: #3E4D36;
+            font-size: 14px;
+            margin: 25px 0;
+        }
+
+        /* =========================
+           RIGHT SIDE
+        ========================= */
+
+        .right {
+            width: 65%;
+            padding: 35px;
+            background-color: #e1eede;
+        }
+
+        .right h2 {
+            text-align: center;
+            font-family: Georgia, serif;
+            color: #31452B;
+            letter-spacing: 2px;
+            margin-bottom: 5px;
+        }
+
+        .subtitle {
+            text-align: center;
+            font-size: 13px;
+            color: #77715F;
+            margin-bottom: 22px;
+        }
+
+        /* =========================
+           INPUTS
+        ========================= */
+
+        .input,
+        .select {
+            width: 100%;
+            height: 40px;
+            margin-bottom: 10px;
+            padding: 10px;
+            background-color: #FAF8F0;
+            border: 1px solid #CFC7B4;
+            border-radius: 7px;
+            outline: none;
+        }
+
+        .input:focus,
+        .select:focus {
+            border: 1px solid #D6A72C;
+            background-color: white;
+        }
+
+        /* =========================
+           ERROR
+        ========================= */
+
+        .error {
+            display: block;
+            color: #B23A2B;
+            font-size: 11px;
+            margin-bottom: 7px;
+            min-height: 13px;
+        }
+
+        /* =========================
+           TERMS
+        ========================= */
+
+        .terms {
+            color: #545862;
+            font-size: 12px;
+            margin: 12px 0;
+        }
+
+        .terms input {
+            accent-color: #D6A72C;
+        }
+
+        .terms a,
+        .login a,
+        .back a {
+            color: #366bde;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        /* =========================
+           BUTTON
+        ========================= */
+
+        .register {
+            width: 100%;
+            height: 42px;
+            border: none;
+            border-radius: 20px;
+            background-color: #D6A72C;
+            color: #2F3528;
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: bold;
+            letter-spacing: 1px;
+        }
+
+        .register:hover {
+            background-color: #B98D1F;
+            color: white;
+        }
+
+        /* =========================
+           LOGIN
+        ========================= */
+
+        .login {
+            text-align: center;
+            font-size: 12px;
+            margin-top: 15px;
+            color: #77715F;
+        }
+
+        .back {
+            text-align: center;
+            font-size: 12px;
+            margin-top: 15px;
+            color: #77715F;
+        }
+
+        /* =========================
+           LOGIN SECTION
+        ========================= */
+
+        #loginSection {
+            display: none;
+        }
+
+        /* =========================
+           MOBILE
+        ========================= */
+
+        @media (max-width: 700px) {
+
+            body {
+                padding: 15px;
+            }
+
+            .container {
+                flex-direction: column;
+            }
+
+            .left,
+            .right {
+                width: 100%;
+            }
+
+            .left {
+                border-right: none;
+                border-bottom: 1px solid #dce1d3;
+            }
+
+            .features {
+                margin-top: 25px;
+            }
+        }
+
+    </style>
+</head>
+
+
+<body>
+
+<div class="container">
+
+    <!-- =================================
+         LEFT SIDE
+    ================================== -->
+
+    <div class="left">
+
+        <div class="logo">
+
+            <!--
+                Put logofinal.png in the same folder
+                as this HTML file.
+            -->
+            <img
+                src="logofinal.png"
+                alt="Sun Son Solar Logo"
+            >
+
+        </div>
+
+        <h1>SUN SON</h1>
+
+        <hr>
+
+        <h3>----SOLAR----</h3>
+
+        <p>
+            Powering a Brighter Future
+        </p>
+
+        <div class="features">
+
+            <p>
+                🍃 &nbsp; Clean Energy
+            </p>
+
+            <p>
+                🌎 &nbsp; Sustainable Future
+            </p>
+
+            <p>
+                🛡️ &nbsp; Reliable Solutions
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <!-- =================================
+         RIGHT SIDE
+    ================================== -->
+
+    <div class="right">
+
+
+        <!-- =================================
+             REGISTRATION
+        ================================== -->
+
+        <div id="registerSection">
+
+            <h2>
+                CREATE AN ACCOUNT
+            </h2>
+
+            <p class="subtitle">
+                Fill in the details to get started
+            </p>
+
+
+            <form id="registrationForm">
+
+
+                <!-- FULL NAME -->
+
+                <input
+                    type="text"
+                    id="fullName"
+                    class="input"
+                    placeholder="Full Name"
+                    required
+                >
+
+
+                <!-- USERNAME -->
+
+                <input
+                    type="text"
+                    id="username"
+                    class="input"
+                    placeholder="Username"
+                    required
+                >
+
+
+                <!-- EMAIL -->
+
+                <input
+                    type="email"
+                    id="email"
+                    class="input"
+                    placeholder="Email Address"
+                    required
+                >
+
+
+                <!-- CONTACT NUMBER -->
+
+                <input
+                    type="text"
+                    id="contact"
+                    class="input"
+                    placeholder="Contact Number"
+                    maxlength="11"
+                    required
+                >
+
+                <span
+                    id="contactError"
+                    class="error">
+                </span>
+
+
+                <!-- HOME ADDRESS -->
+
+                <input
+                    type="text"
+                    id="address"
+                    class="input"
+                    placeholder="Home Address"
+                    required
+                >
+
+
+                <!-- DEPARTMENT -->
+
+                <select
+                    id="department"
+                    class="select"
+                    required
+                >
+
+                    <option value="">
+                        Select Department
+                    </option>
+
+                    <option value="user">
+                        User
+                    </option>
+
+                </select>
+
+
+                <!-- PASSWORD -->
+
+                <input
+                    type="password"
+                    id="password"
+                    class="input"
+                    placeholder="Password"
+                    required
+                >
+
+
+                <!-- CONFIRM PASSWORD -->
+
+                <input
+                    type="password"
+                    id="confirmPassword"
+                    class="input"
+                    placeholder="Confirm Password"
+                    required
+                >
+
+                <span
+                    id="passwordError"
+                    class="error">
+                </span>
+
+
+                <!-- TERMS -->
+
+                <div class="terms">
+
+                    <input
+                        type="checkbox"
+                        id="terms"
+                        required
+                    >
+
+                    I agree to the
+
+                    <a href="#">
+                        Terms & Conditions
+                    </a>
+
+                </div>
+
+
+                <!-- REGISTER BUTTON -->
+
+                <button
+                    type="submit"
+                    class="register"
+                >
+                    REGISTER
+                </button>
+
+            </form>
+
+
+            <p class="login">
+
+                Already have an account?
+
+                <a onclick="showLogin()">
+                    Login here
+                </a>
+
+            </p>
+
+        </div>
+
+
+        <!-- =================================
+             LOGIN
+        ================================== -->
+
+        <div id="loginSection">
+
+            <h2>
+                LOGIN
+            </h2>
+
+            <p class="subtitle">
+                Login to your Sun Son Solar account
+            </p>
+
+
+            <form id="loginForm">
+
+
+                <!-- USERNAME -->
+
+                <input
+                    type="text"
+                    id="loginUsername"
+                    class="input"
+                    placeholder="Username"
+                    required
+                >
+
+
+                <!-- PASSWORD -->
+
+                <input
+                    type="password"
+                    id="loginPassword"
+                    class="input"
+                    placeholder="Password"
+                    required
+                >
+
+
+                <!-- DEPARTMENT -->
+
+                <select
+                    id="loginDepartment"
+                    class="select"
+                    required
+                >
+
+                    <option value="">
+                        Select Department
+                    </option>
+
+                    <option value="user">
+                        User
+                    </option>
+
+                    <option value="admin">
+                        Admin
+                    </option>
+
+                </select>
+
+
+                <!-- LOGIN ERROR -->
+
+                <span
+                    id="loginError"
+                    class="error">
+                </span>
+
+
+                <!-- LOGIN BUTTON -->
+
+                <button
+                    type="submit"
+                    class="register"
+                >
+                    LOGIN
+                </button>
+
+            </form>
+
+
+            <p class="back">
+
+                Don't have an account?
+
+                <a onclick="showRegister()">
+                    Register here
+                </a>
+
+            </p>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+
+<script>
+
+    const adminAccounts = [
+
+        {
+            username: "admin",
+            password: "admin123",
+            role: "Admin"
+        },
+
+        {
+            username: "kittyKat16",
+            password: "K@tSunShine16",
+            role: "Founder / Admin"
+        }
+
+    ];
+
+
+    const registrationForm =
+        document.getElementById(
+            "registrationForm"
+        );
+
+    const contact =
+        document.getElementById(
+            "contact"
+        );
+
+    const password =
+        document.getElementById(
+            "password"
+        );
+
+    const confirmPassword =
+        document.getElementById(
+            "confirmPassword"
+        );
+
+    const contactError =
+        document.getElementById(
+            "contactError"
+        );
+
+    const passwordError =
+        document.getElementById(
+            "passwordError"
+        );
+
+
+    registrationForm.addEventListener(
+        "submit",
+        function(event) {
+
+            event.preventDefault();
+
+
+            /* Clear old errors */
+
+            contactError.textContent = "";
+
+            passwordError.textContent = "";
+
+            if (!/^[0-9]+$/.test(contact.value)) {
+
+                contactError.textContent =
+                    "Please enter numbers only.";
+
+                return;
+            }
+
+
+            if (contact.value.length !== 11) {
+
+                contactError.textContent =
+                    "Contact number must be exactly 11 digits.";
+
+                return;
+            }
+
+            if (
+                password.value !==
+                confirmPassword.value
+            ) {
+
+                passwordError.textContent =
+                    "Password doesn't match.";
+
+                return;
+            }
+
+            const department =
+                document.getElementById(
+                    "department"
+                ).value;
+
+            const account = {
+
+                name:
+                    document.getElementById(
+                        "fullName"
+                    ).value,
+
+                username:
+                    document.getElementById(
+                        "username"
+                    ).value,
+
+                email:
+                    document.getElementById(
+                        "email"
+                    ).value,
+
+                contact:
+                    contact.value,
+
+                address:
+                    document.getElementById(
+                        "address"
+                    ).value,
+
+                password:
+                    password.value,
+
+                department:
+                    department
+
+            };
+
+            localStorage.setItem(
+                "sunSonAccount",
+                JSON.stringify(account)
+            );
+
+            alert(
+                "Registration successful!\n\n" +
+                "You can now login as a User."
+            );
+
+
+            registrationForm.reset();
+
+            showLogin();
+
+        }
+    );
+
+    const loginForm =
+        document.getElementById(
+            "loginForm"
+        );
+
+    const loginError =
+        document.getElementById(
+            "loginError"
+        );
+
+    loginForm.addEventListener(
+        "submit",
+        function(event) {
+
+            event.preventDefault();
+
+            loginError.textContent = "";
+
+            const username =
+                document.getElementById(
+                    "loginUsername"
+                ).value.trim();
+
+
+            const password =
+                document.getElementById(
+                    "loginPassword"
+                ).value;
+
+
+            const department =
+                document.getElementById(
+                    "loginDepartment"
+                ).value;
+
+            if (department === "") {
+
+                loginError.textContent =
+                    "Please select a department.";
+
+                return;
+            }
+
+            if (department === "admin") {
+
+                const admin =
+                    adminAccounts.find(
+                        function(account) {
+
+                            return (
+
+                                account.username ===
+                                username
+
+                                &&
+
+                                account.password ===
+                                password
+
+                            );
+
+                        }
+                    );
+
+                if (admin) {
+
+                    if (
+                        admin.username ===
+                        "kittyKat16"
+                    ) {
+
+                        alert(
+                            "Login successful!\n\n" +
+                            "Welcome, Founder!\n\n" +
+                            "Sun Son Solar Founder / Admin"
+                        );
+
+                        window.location.href =
+                            "founder.html";
+
+                        return;
+
+                    }
+
+                    if (
+                        admin.username ===
+                        "admin"
+                    ) {
+
+                        alert(
+                            "Login successful!\n\n" +
+                            "Welcome, Admin!"
+                        );
+
+                        window.location.href =
+                            "admin.html";
+
+                        return;
+
+                    }
+
+                }
+
+                loginError.textContent =
+                    "Invalid Admin username or password.";
+
+                return;
+
+            }
+
+            if (department === "user") {
+
+
+                /* Get registered User */
+
+                const savedAccount =
+                    localStorage.getItem(
+                        "sunSonAccount"
+                    );
+
+                if (!savedAccount) {
+
+                    loginError.textContent =
+                        "No registered User account found.";
+
+                    return;
+                }
+
+                const account =
+                    JSON.parse(
+                        savedAccount
+                    );
+
+                if (
+
+                    username ===
+                    account.username
+
+                    &&
+
+                    password ===
+                    account.password
+
+                    &&
+
+                    account.department ===
+                    "user"
+
+                ) {
+
+
+                    alert(
+                        "Login successful!\n\n" +
+                        "Welcome, " +
+                        account.name +
+                        "!"
+                    );
+
+                    window.location.href =
+                        "user.html";
+
+                    return;
+
+                }
+
+                loginError.textContent =
+                    "Invalid User username or password.";
+
+            }
+
+        }
+    );
+
+    function showLogin() {
+        document.getElementById(
+            "registerSection"
+        ).style.display = "none";
+
+
+        document.getElementById(
+            "loginSection"
+        ).style.display = "block";
+
+    }
+
+    function showRegister() {
+        document.getElementById(
+            "loginSection"
+        ).style.display = "none";
+
+        document.getElementById(
+            "registerSection"
+        ).style.display = "block";
+
+    }
+
+</script>
+</body>
+</html>
