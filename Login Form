@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
- 
 <style>
        body {
            font-family: Arial, sans-serif;
@@ -150,18 +149,14 @@
            color: #366bde;
            font-weight: bold;
        }
-
 </style>
         <div id="loginSection">
- 
             <h2>
                 LOGIN
             </h2>
- 
             <p class="subtitle">
                 Login to your Sun Son Solar account
             </p>
- 
             <form id="loginForm">
  
                 <!-- USERNAME -->
@@ -172,7 +167,6 @@
                     placeholder="Username"
                     required
                 >
- 
                 <!-- PASSWORD -->
                 <input
                     type="password"
@@ -181,14 +175,12 @@
                     placeholder="Password"
                     required
                 >
- 
                 <!-- DEPARTMENT -->
                 <select
                     id="loginDepartment"
                     class="select"
                     required
                 >
- 
                     <option value="">
                         Select Department
                     </option>
@@ -203,13 +195,11 @@
  
                 </select>
  
- 
                 <!-- LOGIN ERROR -->
                 <span
                     id="loginError"
                     class="error">
                 </span>
- 
  
                 <!-- LOGIN BUTTON -->
                 <button
@@ -220,7 +210,6 @@
                 </button>
  
             </form>
- 
  
             <p class="back">
  
@@ -233,8 +222,6 @@
         </div>
     </div>
 </div>
- 
- 
  
 <script>
  
@@ -283,7 +270,6 @@
             "passwordError"
         );
  
- 
     registrationForm.addEventListener(
         "submit",
         function(event) {
@@ -298,7 +284,6 @@
                     "Please enter numbers only.";
                 return;
             }
- 
  
             if (contact.value.length !== 11) {
                 contactError.textContent =
@@ -471,7 +456,6 @@
                     }
  
                 }
- 
                 loginError.textContent =
                     "Invalid Admin username or password.";
  
@@ -561,10 +545,7 @@
         document.getElementById(
             "registerSection"
         ).style.display = "block";
- 
-    }
- 
+    } 
 </script>
 </body>
 </html>
- 
